@@ -2,13 +2,17 @@ import React from 'react';
 import Hero from '../../components/students/Hero';
 import Companies from '../../components/students/Companies';
 import CourseSection from '../../components/students/CourseSection';
+import TestimonialSecton from '../../components/students/TestimonialSecton';
+import CallToAction from '../../components/students/CallToAction';
 
 const Home = () => {
   return (
-    <div>
+    <div className=" flex flex-col items-center space-y-7 text-center">
       <Hero />
       <Companies />
       <CourseSection />
+      <TestimonialSecton />
+      <CallToAction />
     </div>
   );
 };
