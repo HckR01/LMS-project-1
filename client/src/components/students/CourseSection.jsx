@@ -27,7 +27,7 @@ const CourseSection = () => {
 
       {/* Link to course list */}
       <Link
-        to={'/course-list'}
+        to={'/courses-list/'}
         onClick={() => scrollTo(0, 0)}
         className="text-lg text-gray-500 border border-gray-500/30 px-10 py-3 rounded inline-block mt-4"
       >

@@ -22,7 +22,7 @@ const SearchBar = ({ defaultValue = '' }) => {
         <img
           src={assets.search_icon}
           alt="search_icon"
-          className="md:auto w-10 px-3"
+          className="md:auto w-30 px-3"
         />
 
         {/* search input field */}
