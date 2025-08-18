@@ -3,6 +3,7 @@ import { AppContext } from '../../context/AppContext';
 import SearchBar from '../../components/students/SearchBar';
 import CourseCard from '../../components/students/CourceCard';
 import { useParams } from 'react-router-dom';
+import { assets } from '../../assets/assets';
 
 const CoursesList = () => {
   const { navigate, allCourses } = useContext(AppContext);
@@ -42,11 +43,25 @@ const CoursesList = () => {
         </div>
         <SearchBar data={input} />
       </div>
-      <di className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+      {
+        // conditionally render filter text
+        input && (
+          <div className="inline-flex items-center gap-4 px-4 py-2 bg-gray-100 rounded-full">
+            <p>{input}</p>
+            <img
+              src={assets.cross_icon}
+              alt="cursor"
+              className="cursor-pointer "
+              onClick={() => navigate('/courses-list')}
+            />
+          </div>
+        )
+      }
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
         {filteredCourses.map((course, index) => (
           <CourseCard key={index} course={course} />
         ))}
-      </di>
+      </div>
     </div>
   );
 };
