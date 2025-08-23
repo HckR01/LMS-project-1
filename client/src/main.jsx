@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ClerkProvider } from '@clerk/clerk-react'; //importinf clerk
 
 injectSpeedInsights();
-// Import your Publishable Key
+// Import your Publishable Key from the dashboard
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!PUBLISHABLE_KEY) {
